@@ -23,7 +23,7 @@ const config = {
   REDIS_USER_TTL: Number(process.env.REDIS_USER_TTL || 86400),
 
 
-  MAIL_SEND: process.env.MAIL_SEND,
+  MAIL_SEND: process.env.MAIL_SEND || 'true',
   SENDGRID_API_KEY: process.env.SENDGRID_API_KEY,
 
   GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID,
