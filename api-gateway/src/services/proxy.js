@@ -97,6 +97,8 @@ async function forwardRequest(serviceUrl, path, method, data, headers, circuitBr
                host: undefined,
                // Remove content-length to let axios recalculate
                'content-length': undefined,
+               // Strip browser Origin — internal service-to-service calls don't need it
+               origin: undefined,
           },
           // Important: Don't validate status, let service response through
           validateStatus: () => true,

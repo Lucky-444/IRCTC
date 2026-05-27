@@ -109,7 +109,21 @@ router.get(
 )
 
 router.get(
+     '/admins/trains/train',
+     requireAuth,
+     combinedRateLimit(),
+     adminServiceProxy
+);
+
+router.get(
      '/admins/trains/train/:trainId',
+     requireAuth,
+     combinedRateLimit(),
+     adminServiceProxy
+);
+
+router.get(
+     '/admins/schedules/schedule',
      requireAuth,
      combinedRateLimit(),
      adminServiceProxy
